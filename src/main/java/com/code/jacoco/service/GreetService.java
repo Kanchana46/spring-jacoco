@@ -6,6 +6,10 @@ import org.springframework.stereotype.Service;
 public class GreetService {
 
     public String greet(String name) {
-        return "Hello, " + (name != null ? name : "World") + "!";
+        if (name != null) {
+            return "Hello " + name + "!";
+        } else {
+            return "You are missing!";
+        }
     }
 }
